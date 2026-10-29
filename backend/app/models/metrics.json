@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "trained_at": "2026-10-29T07:00:32+00:00",
+  "sklearn": "1.6.1",
+  "messages_trained_on": 6300,
+  "urls_trained_on": 6400,
+  "per_class": {
+    "genuine": 2400,
+    "scam": 2400,
+    "spam": 1500
+  },
+  "internal_split_accuracy": 0.998,
+  "holdout": {
+    "messages": {
+      "n": 18,
+      "accuracy": 0.889,
+      "macro_f1": 0.889,
+      "labels": [
+        "genuine",
+        "scam",
+        "spam"
+      ],
+      "confusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          0,
+          5
+        ]
+      ],
+      "missed_bad_as_genuine": 1,
+      "genuine_flagged_as_bad": 0
+    },
+    "urls": {
+      "n": 12,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "labels": [
+        "safe",
+        "malicious"
+      ],
+      "confusion": [
+        [
+          7,
+          0
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    }
+  },
+  "note": "Trained on a synthetic template corpus plus any extra data supplied. Holdout examples are kept out of training and provide a small sanity check, not a production-grade benchmark. Validate on a larger representative dataset."
+}
